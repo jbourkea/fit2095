@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table style="width:90%;text-align: center;">
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date of Birth</th>
+            <th>Number of Patients</th>
+            <th>State</th>
+            <th>Suburb</th>
+            <th>Street</th>
+            <th>Unit</th>
+
+        </tr>
+        <% for(let i = 0;i<db.length;i++) {%>
+            <tr>
+            <td><%= db[i]._id %></td>
+            <td><%= db[i].firstName%></td>
+            <td><%= db[i].lastName%></td>
+            <td><%= db[i].dateOfBirth.getDay() + "/" + (db[i].dateOfBirth.getMonth()+1) + "/" + db[i].dateOfBirth.getFullYear()%></td>
+            <td><%= db[i].numPatients%></td>
+            <td><%= db[i].address.state%></td>
+            <td><%= db[i].address.suburb%></td>
+            <td><%= db[i].address.street%></td>
+            <td><%= db[i].address.unit%></td>
+            </tr>
+        <%};%>
+    </table>
+</body>
+</html>

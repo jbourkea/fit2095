@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/newbook">New Book</a></li>
+        <li><a href="/allbooks">All Books</a></li>
+    </ul>
+    <table style="width:80%;text-align: center;">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Topic</th>
+            <th>Date of Publication</th>
+            <th>Summary</th>
+
+        </tr>
+        <% for(let i = 0;i<db.length;i++) {%>
+            <tr>
+            <td><%= db[i].title%></td>
+            <td><%= db[i].author%></td>
+            <td><%= db[i].topic%></td>
+            <td><%= db[i].dateofpub.getDay() + "/" + (db[i].dateofpub.getMonth()+1) + "/" + db[i].dateofpub.getFullYear()%></td>
+            <td><%= db[i].summary%></td>
+            </tr>
+        <%};%>
+    </table>
+</body>
+</html>

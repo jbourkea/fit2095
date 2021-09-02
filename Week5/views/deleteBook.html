@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete By Topic</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/newbook">New Book</a></li>
+        <li><a href="/allbooks">All Books</a></li>
+    </ul>
+    </br>
+    <form action='/deletebook' method="POST">
+        <label for="topic">Topic To Delete</label>
+        <input type="text" name="topic" id="topic">
+        <label for="submit">Delete topic</label>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
